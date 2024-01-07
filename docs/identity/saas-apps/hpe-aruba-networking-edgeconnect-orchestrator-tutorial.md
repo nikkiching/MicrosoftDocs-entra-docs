@@ -73,18 +73,19 @@ Follow these steps to enable Microsoft Entra SSO in the Microsoft Entra admin ce
 1. On the **Basic SAML Configuration** section, perform the following steps:
 
     a. In the **Identifier** text box, type a URL using the following pattern:
+    - If your orchestrator is a cloud application:
     `https://<SUBDOMAIN>.silverpeak.cloud/gms/rest/authentication/saml2/consume`
+    - If your orchestrator is an on-prem application:
+    `https://<IP>/gms/rest/authentication/saml2/consume`
 
     b. In the **Reply URL** text box, type a URL using the following pattern:
+    - If your orchestrator is a cloud application:
     `https://<SUBDOMAIN>.silverpeak.cloud/gms/rest/authentication/saml2/consume`
-
-1. Perform the following step, if you wish to configure the application in **SP** initiated mode:
-
-    In the **Sign-on URL** text box, type a URL using the following pattern:
-    `https://<SUBDOMAIN>.silverpeak.cloud`
+    - If your orchestrator is an on-prem application:
+    `https://<IP>/gms/rest/authentication/saml2/consume` or `http://<IP>/gms/rest/authentication/saml2/consume`
 
 	> [!NOTE]
-	> These values are not real. Update these values with the actual Identifier, Reply URL and Sign on URL. Contact [HPE Aruba Networking EdgeConnect Orchestrator support team](mailto:support@silver-peak.com) to get these values. You can also refer to the patterns shown in the **Basic SAML Configuration** section in the Microsoft Entra admin center.
+	> These values are not real. Update these values with the actual Identifier and Reply URL based on the IP or hostname from Orchestrator. You can also refer to the **ACS URL** text box from Orchestrator.
 
 1. On the **Set up single sign-on with SAML** page, in the **SAML Signing Certificate** section, find **Certificate (Base64)** and select **Download** to download the certificate and save it on your computer.
 
